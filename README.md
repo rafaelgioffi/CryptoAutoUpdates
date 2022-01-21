@@ -15,7 +15,7 @@ Mantenha os valores das principais criptomoedas atualizados em uma planilha!
 <h3>CCAR</h3>
 
 <h2>Instalação</h2>
-<ol>Extraia todos os arquivos em uma pasta do seu computador</ol>
+<ol><ul>Extraia todos os arquivos em uma pasta do seu computador</ul></ol>
 <ol>Caso possua o Python instalado, abra o Prompt de comando do Windows ou terminal (se estiver no Linux)</ol>
 <ol>Navegue até a pasta onde você extraiu os arquivos. Ex.: <b>cd C:\Users\XXX\Downloads\CryptoAutoUpdates</br> (onde <br>XXX</b> é o seu nome de usuário)</ol>
 <ol>Execute: <b>pip install -r requirements.txt</br></ol>
