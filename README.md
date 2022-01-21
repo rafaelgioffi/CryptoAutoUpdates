@@ -9,7 +9,7 @@ Keep the values of the main cryptocurrencies up to date in a spreadsheet!
 <ol>
 <li>Extract all files in a folder on your computer</li>
 <li>If you have Python installed, open the Windows Command Prompt or Terminal (if you are on Linux)</li>
-<li>Navigate to the folder where you extracted the files. Eg: <b>cd C:\Users\XXX\Downloads\CryptoAutoUpdates</br> (where <br>XXX</b> is your username)</li>
+<li>Navigate to the folder where you extracted the files. Eg: <b>cd C:\Users\XXX\Downloads\CryptoAutoUpdates</br> (where <b>XXX</b> is your username)</li>
 <li>Run: <b>pip install -r requirements.txt</br></li>
 <li>Open the file <b>CryptoUpdates.py</b></li>
 </ol> 
