@@ -1,7 +1,8 @@
-﻿Crypto Auto Updates
+--
+<h1>Crypto Auto Updates</h1>
 
-[en-US]
-Keep the values of the main cryptocurrencies up to date in a spreadsheet!
+<h2>[en-US]
+Keep the values of the main cryptocurrencies up to date in a spreadsheet! </h2>
 <h3>BCoin</h3>
 <h3>CCAR</h3>
 
@@ -18,8 +19,8 @@ for more coins, send a commit or contact cmg
 
 If you like my work, make a contribution :-) 
 
-[pt-BR]
-Mantenha os valores das principais criptomoedas atualizados em uma planilha!
+<h2>[pt-BR]
+Mantenha os valores das principais criptomoedas atualizados em uma planilha!</h2>
 <h3>BCoin</h3>
 <h3>CCAR</h3>
 
