@@ -19,4 +19,4 @@ para mais moedas, manda um commit ou entre em contato cmg
 Se gostar do meu trabalho, faz uma contribuição :-)
 
 
-<img src="https://ibb.co/VDwrgvH"></img>
+<img src="https://i.ibb.co/jGJByLV/qr-rafaelgioffi.png" alt="qr-rafaelgioffi" border="0">
