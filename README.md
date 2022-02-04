@@ -24,5 +24,5 @@ para mais moedas, manda um commit ou entre em contato cmg
 
 Se gostar do meu trabalho, faz uma contribuição :-)
 
-
+![Screenshot](qr_rafaelgioffi.png)
 <img width="256" heigth="256" src="https://ibb.co/VDwrgvH"></img>
