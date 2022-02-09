@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import pandas as pd
 import os
+import colorama
+from colorama import Fore, Style
 
 bcoin_d = 0.0
 bcoin_r = 0.0
@@ -23,12 +25,14 @@ step_r = 0.0
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 s = Service(r'bin\chromedriver.exe')
+colorama.init()
 
 inter = int(input('Qual tempo de atualização (em minutos): '))
 
 title = pygetwindow.getActiveWindowTitle()
 script = pygetwindow.getWindowsWithTitle(title)[0]
 script.resizeTo(700, 250)
+print(Fore.BLACK + Style.DIM + '')
 
 def cotacao(s):
     navegador = webdriver.Chrome(service=s, options=chrome_options)
@@ -52,11 +56,11 @@ def cotacao(s):
             'value')
         # print(f'Valor do BCOIN ==> R${bcoin_r}')
         os.system('cls') or None
-        print(f'BCOIN updated! US${bcoin_d} (R${bcoin_r})')
-        print(f'BCOIN atualizado! US${bcoin_d} (R${bcoin_r})')
+        print(Fore.LIGHTGREEN_EX + f'BCOIN updated! US${bcoin_d} (R${bcoin_r})')
+        print(f'BCOIN atualizado! US${bcoin_d} (R${bcoin_r})' + Fore.BLACK)
     except:
-        print('Failed do update BCOIN...')
-        print('Falha ao atualizar o BCOIN...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update BCOIN...')
+        print('Falha ao atualizar o BCOIN...' + Fore.BLACK)
 
     try:
         navegador.get('https://coinmarketcap.com/currencies/cryptocars/')
@@ -74,11 +78,11 @@ def cotacao(s):
             'value')
         # print(f'Valor do CCAR ==> R${ccar_r}')
         os.system('cls') or None
-        print(f'CCAR updated! US${ccar_d} (R${ccar_r})')
-        print(f'CCAR atualizado! US${ccar_d} (R${ccar_r})')
+        print(Fore.LIGHTGREEN_EX + f'CCAR updated! US${ccar_d} (R${ccar_r})')
+        print(f'CCAR atualizado! US${ccar_d} (R${ccar_r})' + Fore.BLACK)
     except:
-        print('Failed do update CCAR...')
-        print('Falha ao atualizar o CCAR...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update CCAR...')
+        print('Falha ao atualizar o CCAR...' + Fore.BLACK)
 
     try:
         navegador.get('https://pancakeswap.finance/swap?outputCurrency=0x322e5015cc464ada7f99de7131ce494de1834396')
@@ -97,11 +101,11 @@ def cotacao(s):
             'value')
 
         ccar2_d = ccar2_d[:6]
-        print(f'CCAR2 updated! US${ccar2_d}')
-        print(f'CCAR2 atualizado! US${ccar2_d}')
+        print(Fore.LIGHTGREEN_EX + f'CCAR2 updated! US${ccar2_d}')
+        print(f'CCAR2 atualizado! US${ccar2_d}' + Fore.BLACK)
     except:
-        print('Failed do update CCAR2...')
-        print('Falha ao atualizar o CCAR2...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update CCAR2...')
+        print('Falha ao atualizar o CCAR2...' + Fore.BLACK)
 
     try:
         navegador.get('https://coinmarketcap.com/currencies/step-hero/')
@@ -119,11 +123,11 @@ def cotacao(s):
             'value')
         # print(f'Valor do STEP HERO ==> R${step_r}')
         os.system('cls') or None
-        print(f'STEP updated! US${step_d} (R${step_r})')
-        print(f'STEP atualizado! US${step_d} (R${step_r})')
+        print(Fore.LIGHTGREEN_EX + f'STEP updated! US${step_d} (R${step_r})')
+        print(f'STEP atualizado! US${step_d} (R${step_r})' + Fore.BLACK)
     except:
-        print('Failed do update STEP...')
-        print('Falha ao atualizar o STEP...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update STEP...')
+        print('Falha ao atualizar o STEP...' + Fore.BLACK)
 
     try:
         navegador.get('https://coinmarketcap.com/currencies/widiland/')
@@ -141,11 +145,11 @@ def cotacao(s):
             'value')
         # print(f'Valor do Widi ==> R${widi_r}')
         os.system('cls') or None
-        print(f'WIDI updated! US${widi_d} (R${widi_r})')
-        print(f'WIDI atualizado! US${widi_d} (R${widi_r})')
+        print(Fore.LIGHTGREEN_EX + f'WIDI updated! US${widi_d} (R${widi_r})')
+        print(f'WIDI atualizado! US${widi_d} (R${widi_r})' + Fore.BLACK)
     except:
-        print('Failed do update WIDI...')
-        print('Falha ao atualizar o WIDI...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update WIDI...')
+        print('Falha ao atualizar o WIDI...' + Fore.BLACK)
 
     try:
         navegador.get('https://coinmarketcap.com/currencies/wso/')
@@ -163,11 +167,11 @@ def cotacao(s):
             'value')
         # print(f'Valor do WSO ==> US${wso_r}')
         os.system('cls') or None
-        print(f'WSO updated! US${wso_d} (R${wso_r})')
-        print(f'WSO atualizado! US${wso_d} (R${wso_r})')
+        print(Fore.LIGHTGREEN_EX + f'WSO updated! US${wso_d} (R${wso_r})')
+        print(f'WSO atualizado! US${wso_d} (R${wso_r})' + Fore.BLACK)
     except:
-        print('Failed do update WSO...')
-        print('Falha ao atualizar o WSO...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update WSO...')
+        print('Falha ao atualizar o WSO...' + Fore.BLACK)
 
     try:
         navegador.get('https://google.com.br')
@@ -179,11 +183,11 @@ def cotacao(s):
                                        '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]').get_attribute(
             'data-value')
         os.system('cls') or None
-        print(f'Dolar updated! R${dolar}')
-        print(f'Dólar atualizado! R${dolar}')
+        print(Fore.LIGHTGREEN_EX + f'Dolar updated! R${dolar}')
+        print(f'Dólar atualizado! R${dolar}' + Fore.BLACK)
     except:
-        print('Failed do update Dolar...')
-        print('Falha ao atualizar o Dólar...')
+        print(Fore.RED + Style.BRIGHT + 'Failed do update Dolar...')
+        print('Falha ao atualizar o Dólar...' + Fore.BLACK)
 
 
     bcoin_d = float(bcoin_d)
@@ -210,14 +214,18 @@ def cotacao(s):
 
     if ccar2_d >= 0.0001:
         ccar2_d = '{:.4f}'.format(ccar2_d)
-        ccar2_r = '{:.4f}'.format(ccar2_r).zfill(6)
+        ccar2_r = '{:.4f}'.format(ccar2_r)
 
     elif ccar2_d >= 0.01:
-        ccar2_d = '{:.2f}'.format(ccar2_d)
-        ccar2_r = '{:.2f}'.format(ccar2_r)
+        ccar2_d = '{:.2f}'.format(ccar2_d) + '  '
+        ccar2_r = '{:.2f}'.format(ccar2_r) + '  '
 
-    ccar2_d = ccar2_d.replace('.', ',')
-    ccar2_r = ccar2_r.replace('.', ',')
+    if ccar2_d == 0:
+        ccar2_d = '{:.4f}'.format(ccar2_d)
+        ccar2_r = '{:.4f}'.format(ccar2_r)
+    else:
+        ccar2_d = ccar2_d.replace('.', ',')
+        ccar2_r = ccar2_r.replace('.', ',')
 
     # print(ccar2_d, type(ccar2_d))
     # print(ccar2_r, type(ccar2_r))
@@ -233,7 +241,6 @@ def cotacao(s):
     widi_d = float(widi_d)
     widi_d = '{:.2f}'.format(widi_d)
     widi_d = widi_d.replace('.', ',')
-
     widi_r = float(widi_r)
     widi_r = '{:.2f}'.format(widi_r)
     widi_r = widi_r.replace('.', ',')
@@ -241,7 +248,6 @@ def cotacao(s):
     wso_d = float(wso_d)
     wso_d = '{:.2f}'.format(wso_d)
     wso_d = wso_d.replace('.', ',')
-
     wso_r = float(wso_r)
     wso_r = '{:.2f}'.format(wso_r)
     wso_r = wso_r.replace('.', ',')
@@ -250,8 +256,6 @@ def cotacao(s):
     dolar = '{:.2f}'.format(dolar)
     dolar = dolar.replace('.', ',')
 
-    # tabela = pd.read_excel(bomb)
-    # tabela = tabela.drop(['Unnamed: 0'], axis=1)
     tabela = {'': ['BCOIN', 'CCAR', 'CCAR2', 'STEP HERO', 'WIDI', 'WSO', 'Dólar'],
               'US$': [bcoin_d, ccar_d, ccar2_d, step_d, widi_d, wso_d, dolar],
               'R$': [bcoin_r, ccar_r, ccar2_r, step_r, widi_r, wso_r, '']}
@@ -261,46 +265,53 @@ def cotacao(s):
     script.moveTo(1, 1)
     script.resizeTo(945, 280)
 
+    bcoin_d = str(bcoin_d)
+    # bcoin_d = bcoin_d.replace('.', ',')
+    bcoin_r = str(bcoin_r)
+    # bcoin_r = bcoin_r.replace('.', ',')
+
+    ccar_d = str(ccar_d)
+    # ccar_d = ccar_d.replace('.', ',')
+    ccar_r = str(ccar_r)
+    # ccar_r = ccar_r.replace('.', ',')
+    ccar2_d = str(ccar2_d)
+    # ccar2_d = ccar2_d.replace('.', ',')
+    ccar2_r = str(ccar2_r)
+    # ccar2_r = ccar2_r.replace('.', ',')
+
+    step_d = str(step_d)
+    # step_d = step_d.replace('.', ',')
+    step_r = str(step_r)
+    # step_r = step_r.replace('.', ',')
+
+    widi_d = str(widi_d)
+    # widi_d = widi_d.replace('.', ',')
+    widi_r = str(widi_r)
+    # widi_r = widi_r.replace('.', ',')
+
+    wso_d = str(wso_d)
+    # wso_d = wso_d.replace('.', ',')
+    wso_r = str(wso_r)
+    # wso_r = wso_r.replace('.', ',')
+
+    dolar = str(dolar)
+    # dolar = dolar.replace('.', ',')
+
     for cont in range(inter * 60, -1, -1):
         os.system('cls') or None
-        bcoin_d = str(bcoin_d)
-        # bcoin_d = bcoin_d.replace('.', ',')
-        bcoin_r = str(bcoin_r)
-        # bcoin_r = bcoin_r.replace('.', ',')
-
-        ccar_d = str(ccar_d)
-        # ccar_d = ccar_d.replace('.', ',')
-        ccar_r = str(ccar_r)
-        # ccar_r = ccar_r.replace('.', ',')
-        ccar2_d = str(ccar2_d)
-        # ccar2_d = ccar2_d.replace('.', ',')
-        ccar2_r = str(ccar2_r)
-        # ccar2_r = ccar2_r.replace('.', ',')
-
-        step_d = str(step_d)
-        # step_d = step_d.replace('.', ',')
-        step_r = str(step_r)
-        # step_r = step_r.replace('.', ',')
-
-        widi_d = str(widi_d)
-        # widi_d = widi_d.replace('.', ',')
-        widi_r = str(widi_r)
-        # widi_r = widi_r.replace('.', ',')
-
-        wso_d = str(wso_d)
-        # wso_d = wso_d.replace('.', ',')
-        wso_r = str(wso_r)
-        # wso_r = wso_r.replace('.', ',')
-
-        dolar = str(dolar)
-        # dolar = dolar.replace('.', ',')
-        print('Valores atualizados! Aperte Control + C para interromper o script...')
+        print(Fore.YELLOW + Style.BRIGHT + 'Valores atualizados! Aperte Control + C para interromper o script...')
         print('Updated values! Press Control + C to interrupt script...')
         print()
-        print(
+        print(Fore.LIGHTBLACK_EX +
             '################################################################################################################# ')
-        print(
-            f'# BCOIN: US${bcoin_d} (R${bcoin_r})  |  CCAR: US${ccar_d} (R${ccar_r})  |  CCAR2: US${ccar2_d} (R${ccar2_r})  |  STEP: US${step_d} (R${step_r}) # #  WIDI: US${widi_d} (R${widi_r})  |   WSO: US${wso_d} (R${wso_r})  |  Dólar: R${dolar}                                          #')
+        print('# ' + Fore.LIGHTGREEN_EX + Style.BRIGHT +
+            f'BCOIN: US${bcoin_d} (R${bcoin_r})  |  CCAR: US${ccar_d} (R${ccar_r})  |  CCAR2: US${ccar2_d} (R${ccar2_r})  |  STEP: US${step_d} (R${step_r})' +
+              Fore.LIGHTBLACK_EX + Style.BRIGHT +
+              ' # #' +
+              Fore.LIGHTGREEN_EX + Style.BRIGHT +
+              f'  WIDI: US${widi_d} (R${widi_r})  |   WSO: US${wso_d} (R${wso_r})  |  Dólar: R${dolar}                                         ' +
+              Fore.LIGHTBLACK_EX +
+              ' #')
         print(
             '################################################################################################################# ')
         print()
@@ -311,11 +322,15 @@ def cotacao(s):
         if cont > 60:
             m = int(round(cont / 60, 2))
             s = cont % 60
-            print(f'{m}m:{s}s {msg}')
-        else:
-            print(f'{cont}s {msg}')
+            print(Fore.LIGHTGREEN_EX + Style.BRIGHT + f'{m}m:{s}s {msg}')
+        if cont < 60 and cont > 10:
+            print(Fore.LIGHTYELLOW_EX + Style.BRIGHT + f'{cont}s {msg}')
+        if cont <= 10:
+                print(Fore.LIGHTRED_EX + f'{cont}s {msg}')
+
         pyautogui.sleep(1)
     os.system('cls') or None
+    print(Fore.BLACK + Style.DIM + ' ')
     # navegador.quit()
 
 # msg = f'Aguarde {inter} minuto(s)'
